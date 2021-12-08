@@ -23,7 +23,7 @@
   ),
   'marge' => 
   array (
-    'first_name' => 'Marge',
+    'first_name' => ' Marge',
     'last_name' => ' Simpson',
     'age' => ' 40',
     'occupation' => ' Homemaker',
@@ -31,12 +31,11 @@
   ),
   'bart' => 
   array (
-    'first_name' => 'Bart',
+    'first_name' => ' Bart',
     'last_name' => 'Simpson',
-    'age' => '10',
-    'occupation' => 'Student',
-    'voiced_by' => 'Nancy Cartwright',
-    'image_url' => 'images/bart.png',
+    'age' => ' 10',
+    'occupation' => ' Student',
+    'voiced_by' => ' Nancy Cartwright',
   ),
   'lisa' => 
   array (
@@ -153,8 +152,7 @@
                                    $simpsons_characters['homer']['voiced_by'] . 
                                    "</li>";
                              }
-                             ?>
-                             <?php 
+                              
                             /* if marge is selected */
                            if(isset($_POST['marge'])) {
                                 echo "<li>" . 
@@ -170,6 +168,22 @@
                                    $simpsons_characters['marge']['voiced_by'] . 
                                    "</li>";
                              }
+
+                             /* if bart is selected */
+                           if(isset($_POST['bart'])) {
+                            echo "<li>" . 
+                            "<img src='images/bart.png'>" .
+                              "<br>" . 
+                              'Name:' .
+                               $simpsons_characters['bart']['first_name'] .' '. $simpsons_characters['bart']['last_name'] . "<br>" .
+                               'Age:' .
+                               $simpsons_characters['bart']['age']. "<br>" .
+                               'Occupation:' .
+                               $simpsons_characters['bart']['occupation'] . "<br>" .
+                               'Voiced By:' .
+                               $simpsons_characters['bart']['voiced_by'] . 
+                               "</li>";
+                         }
                              ?>
                              
                              </ul>                                                                                                                                                                                                                                                                                                                                                                                         </ul>

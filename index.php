@@ -39,12 +39,11 @@
   ),
   'lisa' => 
   array (
-    'first_name' => 'Lisa',
+    'first_name' => ' Lisa',
     'last_name' => 'Simpson',
-    'age' => '8',
-    'occupation' => 'Student',
-    'voiced_by' => 'Yeardley Smith',
-    'image_url' => 'images/lisa.png',
+    'age' => ' 8',
+    'occupation' => ' Student',
+    'voiced_by' => ' Yeardley Smith',
   ),
   'maggie' => 
   array (
@@ -182,6 +181,22 @@
                                $simpsons_characters['bart']['occupation'] . "<br>" .
                                'Voiced By:' .
                                $simpsons_characters['bart']['voiced_by'] . 
+                               "</li>";
+                         }
+
+                         /* if lisa is selected */
+                         if(isset($_POST['lisa'])) {
+                            echo "<li>" . 
+                            "<img src='images/lisa.png'>" .
+                              "<br>" . 
+                              'Name:' .
+                               $simpsons_characters['lisa']['first_name'] .' '. $simpsons_characters['lisa']['last_name'] . "<br>" .
+                               'Age:' .
+                               $simpsons_characters['lisa']['age']. "<br>" .
+                               'Occupation:' .
+                               $simpsons_characters['lisa']['occupation'] . "<br>" .
+                               'Voiced By:' .
+                               $simpsons_characters['lisa']['voiced_by'] . 
                                "</li>";
                          }
                              ?>

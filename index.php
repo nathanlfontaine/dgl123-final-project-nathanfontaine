@@ -10,7 +10,6 @@
 <body>
  <!--Simpsons Array-->
  <?php
- 
  $simpsons_characters = array (
 
   'homer' => 
@@ -66,6 +65,12 @@
         <a href="/">
             <img class="site-header__logo" src="images/logo.svg" alt="Logo">
         </a>
+        <div class="date">
+            <?php 
+            date_default_timezone_set("America/Vancouver");
+            echo date("l") . date("m/d/Y") . "</br>" . date("h:i a");
+            ?>
+            </div>
     </header>
 
     <div id="content" class="site-content">
@@ -133,6 +138,7 @@
                 </div>
                  <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
+
                         <ul class="characters__items"> 
 
                             <!-- php starts here -->

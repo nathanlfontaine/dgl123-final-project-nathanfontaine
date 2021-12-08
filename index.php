@@ -47,10 +47,9 @@
   ),
   'maggie' => 
   array (
-    'first_name' => 'Maggie',
+    'first_name' => ' Maggie',
     'last_name' => 'Simpson',
-    'age' => '8',
-    'image_url' => 'images/maggie.png',
+    'age' => ' 8',
   ),
   'moe' => 
   array (
@@ -197,6 +196,18 @@
                                $simpsons_characters['lisa']['occupation'] . "<br>" .
                                'Voiced By:' .
                                $simpsons_characters['lisa']['voiced_by'] . 
+                               "</li>";
+                         }
+
+                         /* if maggie is selected */
+                         if(isset($_POST['maggie'])) {
+                            echo "<li>" . 
+                            "<img src='images/maggie.png'>" .
+                              "<br>" . 
+                              'Name:' .
+                               $simpsons_characters['maggie']['first_name'] .' '. $simpsons_characters['maggie']['last_name'] . "<br>" .
+                               'Age:' .
+                               $simpsons_characters['maggie']['age']. "<br>" . 
                                "</li>";
                          }
                              ?>

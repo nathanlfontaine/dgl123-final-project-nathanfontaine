@@ -1,3 +1,10 @@
+ <!--
+     Nathaniel Fontaine
+     Dec 8, 2021
+     DGL-123 Final Project
+
+     index.php
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +15,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
  <!--Simpsons Array-->
  <?php
  $simpsons_characters = array (
@@ -62,6 +70,7 @@
   ),
 )
 ?>
+
 <!--Header / Logo -->
     <header id="masthead" class="site-header layout-container">
         <a href="/">
@@ -89,7 +98,7 @@
                                 <img src="images/simpsons.jpg" alt="Simpsons" class="form__image">
                             </div>
 
-                            <!--Form Title -->
+                            <!--Form -->
                             <div class="form__card">
                                 <h3 class="form__heading"> Select characters to show </h3>
                                 <form method="post">
@@ -144,7 +153,8 @@
                     <div class="characters__row layout-row">
                         <ul class="characters__items"> 
 
-                            <!-- php starts here -->
+                            <!-- PHP Starts Here -->
+                            <!-- if no character is selected, display h1 -->
                             <?php 
                             if (!isset($_POST['homer']) 
                             && !isset($_POST['marge'])
@@ -299,7 +309,6 @@
                                "</div>" .
                                "</li>";
                          }
-                             
                         }
                         ?>
                         </ul>

@@ -61,10 +61,12 @@
   ),
 )
 ?>
+<!--Header / Logo -->
     <header id="masthead" class="site-header layout-container">
         <a href="/">
             <img class="site-header__logo" src="images/logo.svg" alt="Logo">
         </a>
+        <!--Displayed Date / Time-->
         <div class="date">
             <?php 
             date_default_timezone_set("America/Vancouver");
@@ -156,17 +158,25 @@
 
                             /* if homer is selected */
                            if(isset($_POST['homer'])) {
-                                echo "<li>" . 
-                                "<img src='images/homer.png'>" .
-                                  "<br>" . 
-                                  'Name:' .
+                                echo "<li class=\"characters__itemContainer\">" . 
+                                "<div class=\"characters__item\"</div>" .
+                                "<img class=\"characters__image\" src='images/homer.png'>" .
+                                  "<div class=\"characters__info\"</div>" . 
+                                  "<h3 class=\"characters__name\">" .
                                    $simpsons_characters['homer']['first_name'] .' '. $simpsons_characters['homer']['last_name'] . "<br>" .
-                                   'Age:' .
-                                   $simpsons_characters['homer']['age']. "<br>" .
-                                   'Occupation:' .
-                                   $simpsons_characters['homer']['occupation'] . "<br>" .
-                                   'Voiced By:' .
+                                   "</h3>" .
+                                   "<div class=\"characters__age characters__attribute\">" .
+                                   "<b>Age:</b>" . 
+                                   $simpsons_characters['homer']['age'] .
+                                   "<div>" .
+                                   "<div class=\"characters__occupation characters__attribute\">" .
+                                   "<b>Occupation:</b>" .
+                                   $simpsons_characters['homer']['occupation'] .
+                                   "</div>" .
+                                   "<div class=\"characters__voicedBy characters__attribute\">" .
+                                   "<b>Voiced By:</b>" .
                                    $simpsons_characters['homer']['voiced_by'] . 
+                                   "</div>" .
                                    "</li>";
                              }
                               
@@ -244,11 +254,10 @@
                                'Voiced By:' .
                                $simpsons_characters['moe']['voiced_by'] . 
                                "</li>";
-                         }
+                            }
                         }
-                             ?>
-                             
-                             </ul>                                                                                                                                                                                                                                                                                                                                                                                         </ul>
+                        ?>
+                        </ul>
                     </div>
                 </div>
             </div>

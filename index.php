@@ -124,7 +124,8 @@
                                     </ul>
                                     
                                      <!--Button-->
-                                    <input class="form__button" type="submit" value="Show Characters">
+                                    <input class="form__button" type="submit" name="submit" value="Show Characters">
+                                    <input class="form__button" type="reset" value="Reset">
                                 </form>
                             </div>
                         </div>
@@ -132,9 +133,20 @@
                 </div>
                  <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
-                    <h2>Simpsons Characters</h2>
                         <ul class="characters__items"> 
+
+                            <!-- php starts here -->
                             <?php 
+                            if (!isset($_POST['homer']) 
+                            && !isset($_POST['marge'])
+                            && !isset($_POST['bart'])
+                            && !isset($_POST['lisa'])
+                            && !isset($_POST['maggie'])
+                            && !isset($_POST['moe'])) 
+                            {
+                                echo '<h1>Doh! Please Select a Character</h1>'; 
+                            } else {
+
                             /* if homer is selected */
                            if(isset($_POST['homer'])) {
                                 echo "<li>" . 
@@ -226,6 +238,7 @@
                                $simpsons_characters['moe']['voiced_by'] . 
                                "</li>";
                          }
+                        }
                              ?>
                              
                              </ul>                                                                                                                                                                                                                                                                                                                                                                                         </ul>

@@ -92,45 +92,46 @@
                                 <form method="post">
 
                                     <ul class="form__items">
-                                         <!--Homer-->
+                                         <!--Homer 
+                                        "checked" code source: https://www.webdeveloper.com/d/160049-keeping-checkboxes-checked-in-php-->
                                         <li class="form__item">
                                             <label for="homer">Homer Simpson </label>
-                                            <input id="homer" type="checkbox" name="homer">
+                                            <input id="homer" type="checkbox" name="homer" <?php if(isset($_POST['homer'])) echo "checked";?>>
                                         </li>
                                          <!--Marge-->
                                         <li class="form__item">
                                             <label for="marge">Marge Simpson </label>
-                                            <input id="marge" type="checkbox" name="marge">
+                                            <input id="marge" type="checkbox" name="marge" <?php if(isset($_POST['marge'])) echo "checked";?>>
                                         </li>
                                         
                                          <!--Bart-->
                                         <li class="form__item">
                                             <label for="bart">Bart Simpson </label>
-                                            <input id="bart" type="checkbox" name="bart">                           
+                                            <input id="bart" type="checkbox" name="bart" <?php if(isset($_POST['bart'])) echo "checked";?>>                           
                                         </li>
                                         
                                          <!--Lisa-->
                                         <li class="form__item">
                                             <label for="lisa">Lisa Simpson </label>
-                                            <input id="lisa" type="checkbox" name="lisa">                                
+                                            <input id="lisa" type="checkbox" name="lisa" <?php if(isset($_POST['lisa'])) echo "checked";?>>                                
                                         </li>
                                         
                                          <!--Maggie-->
                                         <li class="form__item">
                                             <label for="maggie">Maggie Simpson </label>
-                                            <input id="maggie" type="checkbox" name="maggie">                               
+                                            <input id="maggie" type="checkbox" name="maggie <?php if(isset($_POST['maggie'])) echo "checked";?>">                               
                                         </li>
                                         
                                          <!--Moe-->
                                         <li class="form__item">
                                             <label for="moe">Moe Szyslak </label>
-                                            <input id="moe" type="checkbox" name="moe">                              
+                                            <input id="moe" type="checkbox" name="moe" <?php if(isset($_POST['moe'])) echo "checked";?>>                              
                                         </li>
                                     </ul>
                                     
                                      <!--Button-->
                                     <input class="form__button" type="submit" name="submit" value="Show Characters">
-                                    <input class="form__button" type="reset" value="Reset">
+                                    
                                 </form>
                             </div>
                         </div>

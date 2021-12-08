@@ -210,6 +210,22 @@
                                $simpsons_characters['maggie']['age']. "<br>" . 
                                "</li>";
                          }
+
+                          /* if moe is selected */
+                         if(isset($_POST['moe'])) {
+                            echo "<li>" . 
+                            "<img src='images/moe.png'>" .
+                              "<br>" . 
+                              'Name:' .
+                               $simpsons_characters['moe']['first_name'] .' '. $simpsons_characters['moe']['last_name'] . "<br>" .
+                               'Age:' .
+                               $simpsons_characters['moe']['age']. "<br>" .
+                               'Occupation:' .
+                               $simpsons_characters['moe']['occupation'] . "<br>" .
+                               'Voiced By:' .
+                               $simpsons_characters['moe']['voiced_by'] . 
+                               "</li>";
+                         }
                              ?>
                              
                              </ul>                                                                                                                                                                                                                                                                                                                                                                                         </ul>

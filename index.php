@@ -8,7 +8,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+ <!--Simpsons Array-->
+ <?php
+ 
+ $simpsons_characters = array (
+
+  'homer' => 
+  array (
+    'first_name' => ' Homer',
+    'last_name' => 'Simpson',
+    'age' => ' 40',
+    'occupation' => ' Nuclear Safety Inspector',
+    'voiced_by' => 'Dan Castellaneta',
+    'image_url' => 'images/homer.png',
+  ),
+  'marge' => 
+  array (
+    'first_name' => 'Marge',
+    'last_name' => 'Simpson',
+    'age' => '40',
+    'occupation' => 'Homemaker',
+    'voiced_by' => 'Julie Kavner',
+    'image_url' => 'images/marge.png',
+  ),
+  'bart' => 
+  array (
+    'first_name' => 'Bart',
+    'last_name' => 'Simpson',
+    'age' => '10',
+    'occupation' => 'Student',
+    'voiced_by' => 'Nancy Cartwright',
+    'image_url' => 'images/bart.png',
+  ),
+  'lisa' => 
+  array (
+    'first_name' => 'Lisa',
+    'last_name' => 'Simpson',
+    'age' => '8',
+    'occupation' => 'Student',
+    'voiced_by' => 'Yeardley Smith',
+    'image_url' => 'images/lisa.png',
+  ),
+  'maggie' => 
+  array (
+    'first_name' => 'Maggie',
+    'last_name' => 'Simpson',
+    'age' => '8',
+    'image_url' => 'images/maggie.png',
+  ),
+  'moe' => 
+  array (
+    'first_name' => 'Moe',
+    'last_name' => 'Szyslak',
+    'age' => '55',
+    'occupation' => 'Bartender',
+    'voiced_by' => '',
+    'image_url' => 'images/moe.png',
+  ),
+)
+?>
     <header id="masthead" class="site-header layout-container">
         <a href="/">
             <img class="site-header__logo" src="images/logo.svg" alt="Logo">
@@ -27,20 +85,18 @@
                             <div class="form__imageContainer">
                                 <img src="images/simpsons.jpg" alt="Simpsons" class="form__image">
                             </div>
-                            
+
                             <!--Form Title -->
                             <div class="form__card">
                                 <h3 class="form__heading"> Select characters to show </h3>
-                                <form method="get">
+                                <form method="post">
 
                                     <ul class="form__items">
-
                                          <!--Homer-->
                                         <li class="form__item">
                                             <label for="homer">Homer Simpson </label>
                                             <input id="homer" type="checkbox" name="homer">
                                         </li>
-                                        
                                          <!--Marge-->
                                         <li class="form__item">
                                             <label for="marge">Marge Simpson </label>
@@ -79,10 +135,9 @@
                         </div>
                     </div>
                 </div>
-
                  <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
-                        <ul class="characters__items">                                                                                                                                                                                                                                                                                                                                                                                                 </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
                     </div>
                 </div>
             </div>

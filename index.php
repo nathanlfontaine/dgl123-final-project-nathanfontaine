@@ -15,7 +15,7 @@
   'homer' => 
   array (
     'first_name' => ' Homer',
-    'last_name' => 'Simpson',
+    'last_name' => ' Simpson',
     'age' => ' 40',
     'occupation' => ' Nuclear Safety Inspector',
     'voiced_by' => ' Dan Castellaneta',
@@ -39,7 +39,7 @@
   'lisa' => 
   array (
     'first_name' => ' Lisa',
-    'last_name' => 'Simpson',
+    'last_name' => ' Simpson',
     'age' => ' 8',
     'occupation' => ' Student',
     'voiced_by' => ' Yeardley Smith',
@@ -47,17 +47,18 @@
   'maggie' => 
   array (
     'first_name' => ' Maggie',
-    'last_name' => 'Simpson',
+    'last_name' => ' Simpson',
     'age' => ' 8',
+    'occupation' => ' Baby',
+    'voiced_by' => ' Nancy Cartwright',
   ),
   'moe' => 
   array (
-    'first_name' => 'Moe',
-    'last_name' => 'Szyslak',
+    'first_name' => ' Moe',
+    'last_name' => ' Szyslak',
     'age' => '55',
-    'occupation' => 'Bartender',
-    'voiced_by' => '',
-    'image_url' => 'images/moe.png',
+    'occupation' => ' Bartender',
+    'voiced_by' => ' Hank Azaria',
   ),
 )
 ?>
@@ -121,7 +122,7 @@
                                          <!--Maggie-->
                                         <li class="form__item">
                                             <label for="maggie">Maggie Simpson </label>
-                                            <input id="maggie" type="checkbox" name="maggie <?php if(isset($_POST['maggie'])) echo "checked";?>">                               
+                                            <input id="maggie" type="checkbox" name="maggie" <?php if(isset($_POST['maggie'])) echo "checked";?>">                               
                                         </li>
                                         
                                          <!--Moe-->
@@ -141,7 +142,6 @@
                 </div>
                  <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
-
                         <ul class="characters__items"> 
 
                             <!-- php starts here -->
@@ -161,14 +161,14 @@
                                 echo "<li class=\"characters__itemContainer\">" . 
                                 "<div class=\"characters__item\"</div>" .
                                 "<img class=\"characters__image\" src='images/homer.png'>" .
-                                  "<div class=\"characters__info\"</div>" . 
+                                  "<div class=\"haracters__info\"</div>" . 
                                   "<h3 class=\"characters__name\">" .
-                                   $simpsons_characters['homer']['first_name'] .' '. $simpsons_characters['homer']['last_name'] . "<br>" .
+                                   $simpsons_characters['homer']['first_name'] . $simpsons_characters['homer']['last_name'] .
                                    "</h3>" .
                                    "<div class=\"characters__age characters__attribute\">" .
                                    "<b>Age:</b>" . 
                                    $simpsons_characters['homer']['age'] .
-                                   "<div>" .
+                                   "</div>" .
                                    "<div class=\"characters__occupation characters__attribute\">" .
                                    "<b>Occupation:</b>" .
                                    $simpsons_characters['homer']['occupation'] .
@@ -179,82 +179,127 @@
                                    "</div>" .
                                    "</li>";
                              }
-                              
-                            /* if marge is selected */
-                           if(isset($_POST['marge'])) {
-                                echo "<li>" . 
-                                "<img src='images/marge.png'>" .
-                                  "<br>" . 
-                                  'Name:' .
-                                   $simpsons_characters['marge']['first_name'] .' '. $simpsons_characters['marge']['last_name'] . "<br>" .
-                                   'Age:' .
-                                   $simpsons_characters['marge']['age']. "<br>" .
-                                   'Occupation:' .
-                                   $simpsons_characters['marge']['occupation'] . "<br>" .
-                                   'Voiced By:' .
-                                   $simpsons_characters['marge']['voiced_by'] . 
-                                   "</li>";
-                             }
 
-                             /* if bart is selected */
+                             /* if marge is selected */
+                           if(isset($_POST['marge'])) {
+                            echo "<li class=\"characters__itemContainer\">" . 
+                            "<div class=\"characters__item\"</div>" .
+                            "<img class=\"characters__image\" src='images/marge.png'>" .
+                              "<div class=\"haracters__info\"</div>" . 
+                              "<h3 class=\"characters__name\">" .
+                               $simpsons_characters['marge']['first_name'] . $simpsons_characters['marge']['last_name'] .
+                               "</h3>" .
+                               "<div class=\"characters__age characters__attribute\">" .
+                               "<b>Age:</b>" . 
+                               $simpsons_characters['marge']['age'] .
+                               "</div>" .
+                               "<div class=\"characters__occupation characters__attribute\">" .
+                               "<b>Occupation:</b>" .
+                               $simpsons_characters['marge']['occupation'] .
+                               "</div>" .
+                               "<div class=\"characters__voicedBy characters__attribute\">" .
+                               "<b>Voiced By:</b>" .
+                               $simpsons_characters['marge']['voiced_by'] . 
+                               "</div>" .
+                               "</li>";
+                         }
+
+                         /* if bart is selected */
                            if(isset($_POST['bart'])) {
-                            echo "<li>" . 
-                            "<img src='images/bart.png'>" .
-                              "<br>" . 
-                              'Name:' .
-                               $simpsons_characters['bart']['first_name'] .' '. $simpsons_characters['bart']['last_name'] . "<br>" .
-                               'Age:' .
-                               $simpsons_characters['bart']['age']. "<br>" .
-                               'Occupation:' .
-                               $simpsons_characters['bart']['occupation'] . "<br>" .
-                               'Voiced By:' .
+                            echo "<li class=\"characters__itemContainer\">" . 
+                            "<div class=\"characters__item\"</div>" .
+                            "<img class=\"characters__image\" src='images/bart.png'>" .
+                              "<div class=\"haracters__info\"</div>" . 
+                              "<h3 class=\"characters__name\">" .
+                               $simpsons_characters['bart']['first_name'] . $simpsons_characters['bart']['last_name'] .
+                               "</h3>" .
+                               "<div class=\"characters__age characters__attribute\">" .
+                               "<b>Age:</b>" . 
+                               $simpsons_characters['bart']['age'] .
+                               "</div>" .
+                               "<div class=\"characters__occupation characters__attribute\">" .
+                               "<b>Occupation:</b>" .
+                               $simpsons_characters['bart']['occupation'] .
+                               "</div>" .
+                               "<div class=\"characters__voicedBy characters__attribute\">" .
+                               "<b>Voiced By:</b>" .
                                $simpsons_characters['bart']['voiced_by'] . 
+                               "</div>" .
                                "</li>";
                          }
 
                          /* if lisa is selected */
                          if(isset($_POST['lisa'])) {
-                            echo "<li>" . 
-                            "<img src='images/lisa.png'>" .
-                              "<br>" . 
-                              'Name:' .
-                               $simpsons_characters['lisa']['first_name'] .' '. $simpsons_characters['lisa']['last_name'] . "<br>" .
-                               'Age:' .
-                               $simpsons_characters['lisa']['age']. "<br>" .
-                               'Occupation:' .
-                               $simpsons_characters['lisa']['occupation'] . "<br>" .
-                               'Voiced By:' .
+                            echo "<li class=\"characters__itemContainer\">" . 
+                            "<div class=\"characters__item\"</div>" .
+                            "<img class=\"characters__image\" src='images/lisa.png'>" .
+                              "<div class=\"haracters__info\"</div>" . 
+                              "<h3 class=\"characters__name\">" .
+                               $simpsons_characters['lisa']['first_name'] . $simpsons_characters['lisa']['last_name'] .
+                               "</h3>" .
+                               "<div class=\"characters__age characters__attribute\">" .
+                               "<b>Age:</b>" . 
+                               $simpsons_characters['lisa']['age'] .
+                               "</div>" .
+                               "<div class=\"characters__occupation characters__attribute\">" .
+                               "<b>Occupation:</b>" .
+                               $simpsons_characters['lisa']['occupation'] .
+                               "</div>" .
+                               "<div class=\"characters__voicedBy characters__attribute\">" .
+                               "<b>Voiced By:</b>" .
                                $simpsons_characters['lisa']['voiced_by'] . 
+                               "</div>" .
                                "</li>";
                          }
 
                          /* if maggie is selected */
                          if(isset($_POST['maggie'])) {
-                            echo "<li>" . 
-                            "<img src='images/maggie.png'>" .
-                              "<br>" . 
-                              'Name:' .
-                               $simpsons_characters['maggie']['first_name'] .' '. $simpsons_characters['maggie']['last_name'] . "<br>" .
-                               'Age:' .
-                               $simpsons_characters['maggie']['age']. "<br>" . 
+                            echo "<li class=\"characters__itemContainer\">" . 
+                            "<div class=\"characters__item\"</div>" .
+                            "<img class=\"characters__image\" src='images/maggie.png'>" .
+                              "<div class=\"haracters__info\"</div>" . 
+                              "<h3 class=\"characters__name\">" .
+                               $simpsons_characters['maggie']['first_name'] . $simpsons_characters['maggie']['last_name'] .
+                               "</h3>" .
+                               "<div class=\"characters__age characters__attribute\">" .
+                               "<b>Age:</b>" . 
+                               $simpsons_characters['maggie']['age'] .
+                               "</div>" .
+                               "<div class=\"characters__occupation characters__attribute\">" .
+                               "<b>Occupation:</b>" .
+                               $simpsons_characters['maggie']['occupation'] .
+                               "</div>" .
+                               "<div class=\"characters__voicedBy characters__attribute\">" .
+                               "<b>Voiced By:</b>" .
+                               $simpsons_characters['maggie']['voiced_by'] . 
+                               "</div>" .
                                "</li>";
                          }
 
-                          /* if moe is selected */
+                         /* if moe is selected */
                          if(isset($_POST['moe'])) {
-                            echo "<li>" . 
-                            "<img src='images/moe.png'>" .
-                              "<br>" . 
-                              'Name:' .
-                               $simpsons_characters['moe']['first_name'] .' '. $simpsons_characters['moe']['last_name'] . "<br>" .
-                               'Age:' .
-                               $simpsons_characters['moe']['age']. "<br>" .
-                               'Occupation:' .
-                               $simpsons_characters['moe']['occupation'] . "<br>" .
-                               'Voiced By:' .
+                            echo "<li class=\"characters__itemContainer\">" . 
+                            "<div class=\"characters__item\"</div>" .
+                            "<img class=\"characters__image\" src='images/moe.png'>" .
+                              "<div class=\"haracters__info\"</div>" . 
+                              "<h3 class=\"characters__name\">" .
+                               $simpsons_characters['moe']['first_name'] . $simpsons_characters['moe']['last_name'] .
+                               "</h3>" .
+                               "<div class=\"characters__age characters__attribute\">" .
+                               "<b>Age:</b>" . 
+                               $simpsons_characters['moe']['age'] .
+                               "</div>" .
+                               "<div class=\"characters__occupation characters__attribute\">" .
+                               "<b>Occupation:</b>" .
+                               $simpsons_characters['moe']['occupation'] .
+                               "</div>" .
+                               "<div class=\"characters__voicedBy characters__attribute\">" .
+                               "<b>Voiced By:</b>" .
                                $simpsons_characters['moe']['voiced_by'] . 
+                               "</div>" .
                                "</li>";
-                            }
+                         }
+                             
                         }
                         ?>
                         </ul>

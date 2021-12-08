@@ -21,6 +21,11 @@ li {
     margin: auto;
 }
 
+h1 {
+    grid-column: 2/ 3;
+     grid-row: 1;
+}
+
 h3:first-child {
     margin-top: 0px;
 }
@@ -28,6 +33,11 @@ h3:first-child {
 .layout-container {
     padding-left: 6%;
     padding-right: 6%;
+}
+
+
+div {
+    display: block;
 }
 
 .layout-row {

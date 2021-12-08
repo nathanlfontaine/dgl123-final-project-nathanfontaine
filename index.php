@@ -137,7 +137,25 @@
                 </div>
                  <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
-                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                    <h2>Simpsons Characters</h2>
+                        <ul class="characters__items"> 
+                            <?php 
+                            /* if homer is selected */
+                           if(isset($_POST['homer'])) {
+                                echo "<li>" . 
+                                "<img src='images/homer.png'>" .
+                                  "<br>" . 
+                                  'Name:' .
+                                   $simpsons_characters['homer']['first_name'] .' '. $simpsons_characters['homer']['last_name'] . "<br>" .
+                                   'Age:' .
+                                   $simpsons_characters['homer']['age']. "<br>" .
+                                   'Occupation:' .
+                                   $simpsons_characters['homer']['occupation'] . "<br>" .
+                                   $simpsons_characters['homer']['voiced_by'] . 
+                                   "</li>";
+                             }
+                             ?>
+                             </ul>                                                                                                                                                                                                                                                                                                                                                                                         </ul>
                     </div>
                 </div>
             </div>

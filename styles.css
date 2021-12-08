@@ -5,6 +5,8 @@ body {
 }
 
 ul {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -77,6 +79,7 @@ h3:first-child {
     .characters__items {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .characters__itemContainer {
